@@ -25,7 +25,6 @@ CREATE TABLE tbUsuario (
   senhaUsuario VARCHAR (60) NOT NULL,
   permissoes CHAR  (13) NOT NULL,
   idEmpresa INT,
-  FOREIGN KEY (idEmpresa) references tbEmpresa (idEmpresa)
 );
 
  
@@ -45,10 +44,7 @@ CREATE TABLE tbEntradaSensor (
   valorEntrada FLOAT NOT NULL, -- No caso do sensor de presença será 0 ou 1
   dtEntrada DATETIME NOT NULL,
   idSensor INT,
-  FOREIGN KEY (idSensor) references tbSensor (idSensor)
 );
-
-drop database dbsprintpi;
 
 
 
