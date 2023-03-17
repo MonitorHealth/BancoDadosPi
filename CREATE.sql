@@ -24,7 +24,7 @@ CREATE TABLE tbUsuario (
   nomeUsuario VARCHAR (60) NOT NULL,
   senhaUsuario VARCHAR (60) NOT NULL,
   permissoes CHAR  (13) NOT NULL,
-  idEmpresa INT,
+  idEmpresa INT
 );
 
  
@@ -32,7 +32,6 @@ CREATE TABLE tbSensor (
 	idSensor INT PRIMARY KEY AUTO_INCREMENT,
 	tipoSensor CHAR (21) NOT NULL,
 	dtInstalacao DATE NOT NULL,
- -- em qual geladeira o sensor foi instalado (???) 
 	localInstalado VARCHAR (100) NOT NULL
 );
 
@@ -43,7 +42,7 @@ CREATE TABLE tbEntradaSensor (
   idEntrada INT PRIMARY KEY AUTO_INCREMENT,
   valorEntrada FLOAT NOT NULL, -- No caso do sensor de presença será 0 ou 1
   dtEntrada DATETIME NOT NULL,
-  idSensor INT,
+  idSensor INT
 );
 
 
